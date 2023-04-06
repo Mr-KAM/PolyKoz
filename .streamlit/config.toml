@@ -1,0 +1,8 @@
+[theme]
+base="light"
+primaryColor="#dadada"
+[runner]
+fastReruns = true
+[server]
+runOnSave = true
+baseUrlPath = ""
