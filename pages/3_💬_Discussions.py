@@ -26,6 +26,10 @@ def get_models():
     model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
     return tokenizer, model
 
+hidePage(1)
+hideMenu()
+hideMadeWithStreamlit()
+addFont("Gluten")
 
 if "history" not in st.session_state:
     st.session_state.history = []

@@ -213,7 +213,9 @@ st.markdown(code_html, unsafe_allow_html=True)
 
 st.title("IMAGE")
 
-hideMadeWithStreamlit()
 hidePage(1)
+hideMenu()
+hideMadeWithStreamlit()
+addFont("Gluten")
 # hideSideBar()
 # addFont("Gluten")

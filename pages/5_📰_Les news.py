@@ -209,7 +209,10 @@ body .dribbble img {
 <a class="dribbble" href="https://dribbble.com/shots/5419580-Add-Button-hover-animation" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 """
 
-
+hidePage(1)
+hideMenu()
+hideMadeWithStreamlit()
+addFont("Gluten")
 
 st.markdown(code_html, unsafe_allow_html=True)
 
