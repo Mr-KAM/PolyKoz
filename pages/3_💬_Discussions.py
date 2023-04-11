@@ -2,7 +2,12 @@ import streamlit as st
 from streamlit_chat import message
 from transformers import BlenderbotTokenizer
 from transformers import BlenderbotForConditionalGeneration
+from hackst import *
 
+hidePage(1)
+hideMenu()
+hideMadeWithStreamlit()
+addFont("Nunito")
 
 
 def generate_answer():
@@ -17,6 +22,7 @@ def generate_answer():
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
 
+
 @st.cache_resource
 def get_models():
     # it may be necessary for other frameworks to cache the model
@@ -26,16 +32,28 @@ def get_models():
     model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
     return tokenizer, model
 
-hidePage(1)
-hideMenu()
-hideMadeWithStreamlit()
-addFont("Gluten")
 
 if "history" not in st.session_state:
     st.session_state.history = []
 
 
-message("My message") 
-message("Hello bot!", is_user=True)  # align's the message to the right
+tabs = ("Perso ✌🏾", "Groupes ✊🏾")
 
-st.text_input("Envoyer un message:", key="input_text", on_change=generate_answer)
+perso, groupe = st.tabs(tabs)
+
+with perso:
+    contact_perso = st.selectbox(
+        "Pote de discussion", ("Email", "Home phone", "Mobile phone")
+    )
+
+    message("My message")
+    message("Hello bot!", is_user=True)  # align's the message to the right
+
+    st.text_input("Envoyer un message:", key="input_text", on_change=generate_answer)
+
+with groupe:
+    groupe = st.text_input("Groupe de discussion:", key="groupe")
+    # message("My message")
+    # message("Hello bot!", is_user=True)  # align's the message to the right
+
+    # st.text_input("Envoyer un message:", key="input_text", on_change=generate_answer)

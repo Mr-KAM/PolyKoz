@@ -1,8 +1,8 @@
-
-import streamlit as st # pip install streamlit
+import streamlit as st  # pip install streamlit
 
 
 ### Creation des fonctions et procedures
+
 
 def hidePage(number):
     style = f"""
@@ -12,6 +12,7 @@ def hidePage(number):
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def showPage(number):
     style = f"""
     <style>
@@ -19,6 +20,7 @@ def showPage(number):
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
+
 
 def hideAllPages():
     style = """
@@ -30,6 +32,7 @@ def hideAllPages():
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def showAllPages():
     style = """
     <style>
@@ -40,6 +43,7 @@ def showAllPages():
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def hideAllPagesExcept(number):
     style = f"""
     <style>
@@ -48,6 +52,7 @@ def hideAllPagesExcept(number):
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
+
 
 def showAllPagesExcept(number):
     style = f"""
@@ -58,6 +63,7 @@ def showAllPagesExcept(number):
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def hideMadeWithStreamlit():
     style = """
     <style>
@@ -65,6 +71,7 @@ def hideMadeWithStreamlit():
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
+
 
 def showMadeWithStreamlit():
     style = """
@@ -74,6 +81,7 @@ def showMadeWithStreamlit():
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def hideMenu():
     style = """
     <style>
@@ -81,6 +89,7 @@ def hideMenu():
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
+
 
 def hideSideBar():
     style = """
@@ -92,6 +101,7 @@ def hideSideBar():
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def showSideBar():
     style = """
     <style>
@@ -102,6 +112,7 @@ def showSideBar():
     """
     st.markdown(style, unsafe_allow_html=True)
 
+
 def addFont(font):
     style = f"""
     <style>
@@ -110,6 +121,7 @@ def addFont(font):
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
+
 
 def avatarImg(img):
     html = f"""
@@ -122,4 +134,19 @@ def avatarImg(img):
     }}
     </style>
     <img src="{img}" alt="Avatar" class="avatar">
+    """
+
+
+def h1(text):
+    st.markdown(
+        f'<h1 style="text-align: center;font-family:Nunito; font-size:50pt">{text}</h1>',
+        unsafe_allow_html=True,
+    )
+
+
+def loadDaisyUI():
+    html = """
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     """

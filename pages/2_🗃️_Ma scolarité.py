@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from hackst import *
 
-code_html="""
+code_html = """
 <style type="text/css">
 .add {
   width: 84px;
@@ -207,8 +207,6 @@ body .dribbble img {
 """
 
 
-
-
 st.markdown(code_html, unsafe_allow_html=True)
 
 st.title("IMAGE")
@@ -216,6 +214,4 @@ st.title("IMAGE")
 hidePage(1)
 hideMenu()
 hideMadeWithStreamlit()
-addFont("Gluten")
-# hideSideBar()
-# addFont("Gluten")
+addFont("Nunito")

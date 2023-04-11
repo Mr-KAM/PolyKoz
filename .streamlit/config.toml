@@ -1,6 +1,6 @@
 [theme]
 base="light"
-primaryColor="#dadada"
+primaryColor="#fd7808"
 [runner]
 fastReruns = true
 [server]
